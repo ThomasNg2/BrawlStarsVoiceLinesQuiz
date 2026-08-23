@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+#voiceline {
+  background-color: lightblue;
+  width: 100%;
+  height: 30%;
+}
+
+#brawlerselect {
+  background-color: darkgray;
+  width: 100%;
+  height: 70%;
+  overflow-y: scroll;
+}
