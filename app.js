@@ -2,6 +2,7 @@ let answer = ''
 
 function changeAnswer(newAnswer) {
     answer = newAnswer
+    console.log(answer)
 }
 
 function checkAnswer() {
@@ -25,6 +26,9 @@ loadData('./voices.json').then((data) => {
     brawlerNames.forEach(name => {
         const imgElement = document.createElement('img')
         imgElement.src = `./assets/${name}/icon.webp`
+        imgElement.onclick = () => {
+            changeAnswer(name)
+        }
         brawlerSelectElement.appendChild(imgElement)
     })
 })
