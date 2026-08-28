@@ -1,107 +1,627 @@
 {
-    "8-Bit": [],
-    "Alli": [],
-    "Amber": [],
-    "Angelo": [],
-    "Ash": [],
-    "Barley": [],
-    "Bea": [],
-    "Belle": [],
-    "Berry": [],
-    "Bibi": [],
-    "Bo": [],
-    "Bolt": [],
-    "Bonnie": [],
-    "Brock": [],
-    "Bull": [],
-    "Buster": [],
-    "Buzz": [],
-    "Byron": [],
-    "Carl": [],
-    "Charlie": [],
-    "Chester": [],
-    "Chuck": [],
-    "Clancy": [],
-    "Colette": [],
-    "Colt": [],
-    "Cordelius": [],
-    "Crow": [],
-    "Damian": [],
-    "Darryl": [],
-    "Doug": [],
-    "Draco": [],
-    "Dynamike": [],
-    "Edgar": [],
-    "El Primo": [],
-    "Emz": [],
-    "Eve": [],
-    "Fang": [],
-    "Finx": [],
-    "Frank": [],
-    "Gale": [],
-    "Gene": [],
-    "Gigi": [],
-    "Glowy": [],
-    "Gray": [],
-    "Griff": [],
-    "Grom": [],
-    "Gus": [],
-    "Hank": [],
-    "Jacky": [],
-    "Jae-yong": [],
-    "Janet": [],
-    "Jessie": [],
-    "Juju": [],
-    "Kaze": [],
-    "Kenji": [],
-    "Kit": [],
-    "Larry & Lawrie": [],
-    "Leon": [],
-    "Lola": [],
-    "Lou": [],
-    "Lumi": [],
-    "Maisie": [],
-    "Mandy": [],
-    "Max": [],
-    "Meeple": [],
-    "Meg": [],
-    "Melodie": [],
-    "Mico": [],
-    "Mina": [],
-    "Moe": [],
-    "Mortis": [],
-    "Mr. P": [],
-    "Najia": [],
-    "Nani": [],
-    "Nita": [],
-    "Nori": [],
-    "Ollie": [],
-    "Otis": [],
-    "Pam": [],
-    "Pearl": [],
-    "Penny": [],
-    "Pierce": [],
-    "Piper": [],
-    "Poco": [],
-    "R-T": [],
-    "Rico": [],
-    "Rosa": [],
-    "Ruffs": [],
-    "Sam": [],
-    "Sandy": [],
-    "Shade": [],
-    "Shelly": [],
-    "Sirius": [],
-    "Spike": [],
-    "Sprout": [],
-    "Squeak": [],
-    "Starr Nova": [],
-    "Stu": [],
-    "Surge": [],
-    "Tara": [],
-    "Tick": [],
-    "Trunk": [],
-    "Wendy": [],
-    "Willow": [],
-    "Ziggy": []
+  "8-Bit": [
+    "8bit die vo 05.ogg",
+    "8bit hurt vo 03.ogg",
+    "8bit hurt vo 05.ogg",
+    "8bit kill vo 04.ogg"
+  ],
+  "Alli": [
+    "Alli dies vo 01.ogg",
+    "Alli kills vo 13.ogg",
+    "Alli lead vo 05.ogg",
+    "Alli ulti vo 04.ogg"
+  ],
+  "Amber": [
+    "Amber dies vo 01.ogg",
+    "Amber hurts vo 05.ogg",
+    "Amber ice lead vo 06.ogg",
+    "Amber ice ulti vo 07.ogg"
+  ],
+  "Angelo": [
+    "Angelo die vo 07.ogg",
+    "Angelo hurt vo 01.ogg",
+    "Angelo kill vo 03.ogg",
+    "Angelo ulti vo 03.ogg"
+  ],
+  "Ash": [
+    "Ash hurt vo 03.ogg",
+    "Ash lead vo 02.ogg",
+    "Ash start vo 04.ogg",
+    "Ash ulti vo 04.ogg"
+  ],
+  "Barley": [
+    "Barley die 02.ogg",
+    "Barley kill 01.ogg",
+    "Barley start 03.ogg",
+    "Barley throw 01.ogg"
+  ],
+  "Bea": [
+    "Bea atk vo 03.ogg",
+    "Bea die vo 02.ogg",
+    "Bea start vo 01.ogg",
+    "Bea ulti vo 01.ogg"
+  ],
+  "Belle": [
+    "Belle die vo 02.ogg",
+    "Belle hurt vo 03.ogg",
+    "Belle kill vo 06.ogg",
+    "Belle ulti vo 02.ogg"
+  ],
+  "Berry": [
+    "Berry die vo 02.ogg",
+    "Berry kill vo 01.ogg",
+    "Berry kill vo 10.ogg",
+    "Berry start vo 05.ogg"
+  ],
+  "Bibi": [
+    "Bibi die vo 02.ogg",
+    "Bibi hurt vo 04.ogg",
+    "Bibi kill vo 01.ogg",
+    "Bibi lead vo 03.ogg"
+  ],
+  "Bo": [
+    "Bo die 03.ogg",
+    "Bo lead vo 01.ogg",
+    "Bo start vo 04.ogg",
+    "Bo ulti vo 04.ogg"
+  ],
+  "Bolt": [
+    "Bolt kill vo 05.ogg",
+    "Bolt lead vo 01.ogg",
+    "Bolt lead vo 03.ogg",
+    "Bolt ulti vo 04.ogg"
+  ],
+  "Bonnie": [
+    "Bonni die vo 03.ogg",
+    "Bonni kill vo 01.ogg",
+    "Bonni kill vo 08.ogg",
+    "Bonni lead vo 05.ogg"
+  ],
+  "Brock": [
+    "Brock death 01.ogg",
+    "Brock hurt 01.ogg",
+    "Brock kill vo 02.ogg",
+    "Brock lead vo 03.ogg"
+  ],
+  "Bull": [
+    "Bull hurt vo 01.ogg",
+    "Bull kill vo 01.ogg",
+    "Bull kill vo 03.ogg",
+    "Bull ulti vo 02.ogg"
+  ],
+  "Buster": [
+    "Buster hurt vo 01.ogg",
+    "Buster hurt vo 03.ogg",
+    "Buster kil vo 04.ogg",
+    "Buster kil vo 09.ogg"
+  ],
+  "Buzz": [
+    "Buzz hurt vo 04.ogg",
+    "Buzz kill vo 02.ogg",
+    "Buzz kill vo 04.ogg",
+    "Buzz lead vo 05.ogg"
+  ],
+  "Byron": [
+    "Snakeoil die vo 02.ogg",
+    "Snakeoil kill vo 01.ogg",
+    "Snakeoil ulti vo 01.ogg",
+    "Snakeoil ulti vo 03.ogg"
+  ],
+  "Carl": [
+    "Carl death vo 02.ogg",
+    "Carl hurt vo 02.ogg",
+    "Carl lead vo 04.ogg",
+    "Carl ulti vo 02.ogg"
+  ],
+  "Charlie": [
+    "Charlotte hurt vo 03.ogg",
+    "Charlotte hurt vo 05.ogg",
+    "Charlotte hurt vo 09.ogg",
+    "Charlotte kill vo 04.ogg"
+  ],
+  "Chester": [
+    "Chester die vo 01.ogg",
+    "Chester die vo 04.ogg",
+    "Chester hurt vo 01.ogg",
+    "Chester kill vo 04.ogg"
+  ],
+  "Chuck": [
+    "Chuck die vo 01.ogg",
+    "Chuck lead vo 04.ogg",
+    "Chuck lead vo 06.ogg",
+    "Chuck start vo 01.ogg"
+  ],
+  "Clancy": [
+    "Clancy atk vo 01.ogg",
+    "Clancy kill vo 02.ogg",
+    "Clancy kill vo 08.ogg",
+    "Clancy lead vo 08.ogg"
+  ],
+  "Colette": [
+    "Colette die vo 02.ogg",
+    "Colette hurt vo 01.ogg",
+    "Colette hurt vo 04.ogg",
+    "Colette ulti vo 01.ogg"
+  ],
+  "Colt": [
+    "Hotshot hurt 03.ogg",
+    "Hotshot hurt 06.ogg",
+    "Hotshot kill 02.ogg",
+    "Hotshot kill 04.ogg"
+  ],
+  "Cordelius": [
+    "Cordelius die vo 03.ogg",
+    "Cordelius die vo 08.ogg",
+    "Cordelius hurt vo 05.ogg",
+    "Cordelius kill vo 03.ogg"
+  ],
+  "Crow": [
+    "Crow get hit 02.ogg",
+    "Crow get hit 04.ogg",
+    "Crow get hit 06.ogg",
+    "Crow kills 03.ogg"
+  ],
+  "Damian": [
+    "Damian dies vo 02.ogg",
+    "Damian hurt vo 01.ogg",
+    "Damian lead vo 01.ogg",
+    "Damian lead vo 06.ogg"
+  ],
+  "Darryl": [
+    "Darryl die vo 01.ogg",
+    "Darryl kill vo 06.ogg",
+    "Darryl ulti vo 06.ogg",
+    "Darryl ulti vo 07.ogg"
+  ],
+  "Doug": [
+    "Doug die vo 01.ogg",
+    "Doug die vo 03.ogg",
+    "Doug die vo 05.ogg",
+    "Doug kill vo 03.ogg"
+  ],
+  "Draco": [
+    "Draco atk vo 01.ogg",
+    "Draco hurt vo 02.ogg",
+    "Draco kill vo 01.ogg",
+    "Draco start vo 05.ogg"
+  ],
+  "Dynamike": [
+    "Tnt guy die 02.ogg",
+    "Tnt guy hurt 04.ogg",
+    "Tnt guy kill 03.ogg",
+    "Tnt guy kill 04.ogg"
+  ],
+  "Edgar": [
+    "Edgar die vo 01.ogg",
+    "Edgar kill vo 05.ogg",
+    "Edgar lead vo 03.ogg",
+    "Edgar start vo 04.ogg"
+  ],
+  "El Primo": [
+    "El primo atk 04.ogg",
+    "El primo lead 03.ogg",
+    "El primo start vo 01.ogg",
+    "El primo start vo 05.ogg"
+  ],
+  "Emz": [
+    "Emz die vo 02.ogg",
+    "Emz die vo 03.ogg",
+    "Emz hurt vo 05.ogg",
+    "Emz start vo 04.ogg"
+  ],
+  "Eve": [
+    "Flea hurt vo 03.ogg",
+    "Flea hurt vo 04.ogg",
+    "Flea kill vo 04.ogg",
+    "Flea start vo 02.ogg"
+  ],
+  "Fang": [
+    "Fang die vo 01.ogg",
+    "Fang die vo 04.ogg",
+    "Fang kill vo 04.ogg",
+    "Fang lead vo 03.ogg"
+  ],
+  "Finx": [
+    "Finx dies vo 02.ogg",
+    "Finx hurt vo 05.ogg",
+    "Finx kill vo 04.ogg",
+    "Finx lead vo 05.ogg"
+  ],
+  "Frank": [
+    "Frank vo 01.ogg",
+    "Frank vo 03.ogg",
+    "Frank vo 04.ogg",
+    "Frank vo 06.ogg"
+  ],
+  "Gale": [
+    "Gale hurt vo 03.ogg",
+    "Gale hurt vo 04.ogg",
+    "Gale lead vo 04.ogg",
+    "Gale ulti vo 01.ogg"
+  ],
+  "Gene": [
+    "Gene vo 02.ogg",
+    "Gene vo 05.ogg",
+    "Gene vo 08.ogg",
+    "Gene vo 14.ogg"
+  ],
+  "Gigi": [
+    "Gigi die vo vb 04.ogg",
+    "Gigi hurt vo vb 04.ogg",
+    "Gigi hurt vo vb 05.ogg",
+    "Gigi start vo sp 04.ogg"
+  ],
+  "Glowy": [
+    "Glowbert die vo 03.ogg",
+    "Glowbert start vo 01.ogg",
+    "Glowbert ulti vo 01.ogg",
+    "Glowbert ulti vo 04.ogg"
+  ],
+  "Gray": [
+    "Grey atk 01.ogg",
+    "Grey atk 04.ogg",
+    "Grey atk 05.ogg",
+    "Grey atk 06.ogg"
+  ],
+  "Griff": [
+    "Griff die vo 04.ogg",
+    "Griff hurt vo 06.ogg",
+    "Griff lead vo 02.ogg",
+    "Griff start vo 07.ogg"
+  ],
+  "Grom": [
+    "Grom die vo 04.ogg",
+    "Grom kill vo 02.ogg",
+    "Grom kill vo 04.ogg",
+    "Grom lead vo 04.ogg"
+  ],
+  "Gus": [
+    "Gus die vo 05.ogg",
+    "Gus hurt vo 03.ogg",
+    "Gus lead vo 03.ogg",
+    "Gus lead vo 04.ogg"
+  ],
+  "Hank": [
+    "Hank die vo 07.ogg",
+    "Hank kill vo 04.ogg",
+    "Hank lead vo 04.ogg",
+    "Hank ulti vo 02.ogg"
+  ],
+  "Jacky": [
+    "Jackie hurt vo 01.ogg",
+    "Jackie hurt vo 03.ogg",
+    "Jackie kill vo 04.ogg",
+    "Jackie start vo 03.ogg"
+  ],
+  "Jae-yong": [
+    "Jae hurt vo 01.ogg",
+    "Jae kill vo 05.ogg",
+    "Jae lead vo 03.ogg",
+    "Jae start vo 04.ogg"
+  ],
+  "Janet": [
+    "Janet die vo 03.ogg",
+    "Janet die vo 04.ogg",
+    "Janet hurt vo 03.ogg",
+    "Janet kill vo 01.ogg"
+  ],
+  "Jessie": [
+    "Jess hurt 05.ogg",
+    "Jess kill 01.ogg",
+    "Jess lead 01.ogg",
+    "Jess ulti 05.ogg"
+  ],
+  "Juju": [
+    "Juju dies vo 01.ogg",
+    "Juju hurt vo 01.ogg",
+    "Juju hurt vo 02.ogg",
+    "Juju kill vo 12.ogg"
+  ],
+  "Kaze": [
+    "Kaze start vo 03.ogg",
+    "Kotomi die vo 01.ogg",
+    "Kotomi die vo 05.ogg",
+    "Kotomi kill vo 04.ogg"
+  ],
+  "Kenji": [
+    "Kenji dies vo 01.ogg",
+    "Kenji hurt vo 03.ogg",
+    "Kenji kill vo 02.ogg",
+    "Kenji lead vo 02.ogg"
+  ],
+  "Kit": [
+    "Kit die vo 04.ogg",
+    "Kit die vo 05.ogg",
+    "Kit kill vo 02.ogg",
+    "Kit kill vo 07.ogg"
+  ],
+  "Larry & Lawrie": [
+    "Larry hurt vo 01.ogg",
+    "Larry hurt vo 02.ogg",
+    "Larry hurt vo 03.ogg",
+    "Larry start vo 01.ogg"
+  ],
+  "Leon": [
+    "Leon die vo 01.ogg",
+    "Leon kill vo 01.ogg",
+    "Leon lead vo 03.ogg",
+    "Leon start vo 02.ogg"
+  ],
+  "Lola": [
+    "Lola die vo 03.ogg",
+    "Lola hurt vo 02.ogg",
+    "Lola kill vo 05.ogg",
+    "Lola start vo 03.ogg"
+  ],
+  "Lou": [
+    "Lou atk vo 06.ogg",
+    "Lou die vo 01.ogg",
+    "Lou die vo 02.ogg",
+    "Lou ulti vo 04.ogg"
+  ],
+  "Lumi": [
+    "Lumi die vo 09.ogg",
+    "Lumi hurt vo 03.ogg",
+    "Lumi kill vo 10.ogg",
+    "Lumi ulti vo 01.ogg"
+  ],
+  "Maisie": [
+    "Maisie die vo 01.ogg",
+    "Maisie kill vo 01.ogg",
+    "Maisie lead vo 01.ogg",
+    "Maisie ulti vo 03.ogg"
+  ],
+  "Mandy": [
+    "Mandy lead vo 02.ogg",
+    "Mandy lead vo 07.ogg",
+    "Mandy start vo 01.ogg",
+    "Mandy ulti vo 03.ogg"
+  ],
+  "Max": [
+    "Max die vo 01.ogg",
+    "Max hurt vo 02.ogg",
+    "Max hurt vo 03.ogg",
+    "Max kill vo 01.ogg"
+  ],
+  "Meeple": [
+    "Meeple die vo 03.ogg",
+    "Meeple die vo 11.ogg",
+    "Meeple hurt vo 13.ogg",
+    "Meeple kill vo 05.ogg"
+  ],
+  "Meg": [
+    "Meg kill vo 01.ogg",
+    "Meg kill vo 04.ogg",
+    "Meg kill vo 05.ogg",
+    "Meg start vo 07.ogg"
+  ],
+  "Melodie": [
+    "Melodie die vo 04.ogg",
+    "Melodie hurt vo 05.ogg",
+    "Melodie kill vo 07.ogg",
+    "Melodie lead vo 04.ogg"
+  ],
+  "Mico": [
+    "Mico hurt vo 02.ogg",
+    "Mico kill vo 06.ogg",
+    "Mico start vo 04.ogg",
+    "Mico ulti vo 03.ogg"
+  ],
+  "Mina": [
+    "Mina die vo 02.ogg",
+    "Mina hurt vo 01.ogg",
+    "Mina hurt vo 04.ogg",
+    "Mina lead vo 06.ogg"
+  ],
+  "Moe": [
+    "Moe atk vo 03.ogg",
+    "Moe die vo 05.ogg",
+    "Moe hurt vo 01.ogg",
+    "Moe lead vo 01.ogg"
+  ],
+  "Mortis": [
+    "Mortis atk vo 04.ogg",
+    "Mortis die 04.ogg",
+    "Mortis die 05.ogg",
+    "Mortis kill 03.ogg"
+  ],
+  "Mr. P": [
+    "Mrp atk vo 01.ogg",
+    "Mrp die vo 02.ogg",
+    "Mrp kill vo 03.ogg",
+    "Mrp kill vo 05.ogg"
+  ],
+  "Najia": [
+    "Najia die vo 01.ogg",
+    "Najia die vo 04.ogg",
+    "Najia hurt vo 02.ogg",
+    "Najia kill vo 07.ogg"
+  ],
+  "Nani": [
+    "Nani die vo 02.ogg",
+    "Nani die vo 05.ogg",
+    "Nani kill vo 02.ogg",
+    "Nani lead vo 01.ogg"
+  ],
+  "Nita": [
+    "Nita hurt 02.ogg",
+    "Nita hurt 05.ogg",
+    "Nita kill vo 03.ogg",
+    "Nita lead 02.ogg"
+  ],
+  "Nori": [
+    "Nori hurt vo 03.ogg",
+    "Nori hurt vo 05.ogg",
+    "Nori kill vo 07.ogg",
+    "Nori lead vo 04.ogg"
+  ],
+  "Ollie": [
+    "Ollie die vo 01.ogg",
+    "Ollie die vo 02.ogg",
+    "Ollie hurt vo 04.ogg",
+    "Ollie kill vo 02.ogg"
+  ],
+  "Otis": [
+    "Otis die vo 04.ogg",
+    "Otis kill vo 01.ogg",
+    "Otis start vo 01.ogg",
+    "Otis start vo 07.ogg"
+  ],
+  "Pam": [
+    "Pam die vo 03.ogg",
+    "Pam hurt vo 01.ogg",
+    "Pam kill vo 01.ogg",
+    "Pam kill vo 03.ogg"
+  ],
+  "Pearl": [
+    "Pearl hurt vo 01.ogg",
+    "Pearl hurt vo 03.ogg",
+    "Pearl kill vo 08.ogg",
+    "Pearl lead vo 03.ogg"
+  ],
+  "Penny": [
+    "Penny kill vo 02.ogg",
+    "Penny kill vo 04.ogg",
+    "Penny lead vo 01.ogg",
+    "Penny ulti vo 02.ogg"
+  ],
+  "Pierce": [
+    "Pierce die vo 01.ogg",
+    "Pierce hurt vo 02.ogg",
+    "Pierce kill vo 01.ogg",
+    "Pierce ulti vo 07.ogg"
+  ],
+  "Piper": [
+    "Piper die 01.ogg",
+    "Piper kill 03.ogg",
+    "Piper lead 03.ogg",
+    "Piper start 02.ogg"
+  ],
+  "Poco": [
+    "Poco hurt 01.ogg",
+    "Poco hurt 03.ogg",
+    "Poco kill 01.ogg",
+    "Poco kill 02.ogg"
+  ],
+  "R-T": [
+    "Rt die vo 01.ogg",
+    "Rt die vo 03.ogg",
+    "Rt hurt vo 01.ogg",
+    "Rt kill vo 06.ogg"
+  ],
+  "Rico": [
+    "Rick die 01.ogg",
+    "Rick hurt 01.ogg",
+    "Rick hurt 02.ogg",
+    "Rick kill vo 04.ogg"
+  ],
+  "Rosa": [
+    "Rosa death 03.ogg",
+    "Rosa hit 01.ogg",
+    "Rosa hit 02.ogg",
+    "Rosa start 01.ogg"
+  ],
+  "Ruffs": [
+    "Ruff die vo 01.ogg",
+    "Ruff hurt vo 01.ogg",
+    "Ruff kill vo 03.ogg",
+    "Ruff start vo 03.ogg"
+  ],
+  "Sam": [
+    "Sam die vo 02.ogg",
+    "Sam die vo 04.ogg",
+    "Sam hurt vo 07.ogg",
+    "Sam hurt vo 09.ogg"
+  ],
+  "Sandy": [
+    "Sandy hurt vo 04.ogg",
+    "Sandy kill vo 03.ogg",
+    "Sandy lead vo 01.ogg",
+    "Sandy lead vo 04.ogg"
+  ],
+  "Shade": [
+    "Shade atk vo 01.ogg",
+    "Shade atk vo 03.ogg",
+    "Shade die vo 02.ogg",
+    "Shade kill vo 03.ogg"
+  ],
+  "Shelly": [
+    "Shelly kill 04.ogg",
+    "Shelly kill 05.ogg",
+    "Shelly lead 01.ogg",
+    "Shelly start 02.ogg"
+  ],
+  "Sirius": [
+    "Sirius die vo 03.ogg",
+    "Sirius hurt vo 01.ogg",
+    "Sirius hurt vo 04.ogg",
+    "Sirius kill vo 02.ogg"
+  ],
+  "Spike": [],
+  "Sprout": [
+    "Sprout die vo 01.ogg",
+    "Sprout hurt vo 01.ogg",
+    "Sprout kill vo 02.ogg",
+    "Sprout kill vo 03.ogg"
+  ],
+  "Squeak": [
+    "Squeak die vo 03.ogg",
+    "Squeak hurt vo 02.ogg",
+    "Squeak kill vo 03.ogg",
+    "Squeak kill vo 05.ogg"
+  ],
+  "Starr Nova": [
+    "Starr nova dies vo 01.ogg",
+    "Starr nova dies vo 04.ogg",
+    "Starr nova hurt vo 05.ogg",
+    "Starr nova kill vo 08.ogg"
+  ],
+  "Stu": [
+    "Stu die vo 06.ogg",
+    "Stu hurt vo 03.ogg",
+    "Stu hurt vo 05.ogg",
+    "Stu kill vo 02.ogg"
+  ],
+  "Surge": [
+    "Surge hurt vo 04.ogg",
+    "Surge hurt vo 05.ogg",
+    "Surge kill vo 02.ogg",
+    "Surge start vo 03.ogg"
+  ],
+  "Tara": [
+    "Tara die vo 02.ogg",
+    "Tara kill vo 03.ogg",
+    "Tara lead vo 01.ogg",
+    "Tara start vo 02.ogg"
+  ],
+  "Tick": [
+    "Tick vo 03v2.ogg",
+    "Tick vo 04v2.ogg",
+    "Tick vo 06hurt.ogg",
+    "Tick vo 08die.ogg"
+  ],
+  "Trunk": [
+    "Trunk die vo 04.ogg",
+    "Trunk hurt vo 04.ogg",
+    "Trunk hurt vo 05.ogg",
+    "Trunk start vo 09.ogg"
+  ],
+  "Wendy": [
+    "Wendy die vo 04.ogg",
+    "Wendy hurt vo 02.ogg",
+    "Wendy kill vo 01.ogg",
+    "Wendy lead vo 08.ogg"
+  ],
+  "Willow": [
+    "Willow die vo 03.ogg",
+    "Willow kill vo 01.ogg",
+    "Willow lead vo 01.ogg",
+    "Willow lead vo 06.ogg"
+  ],
+  "Ziggy": [
+    "Ziggy die vo 04.ogg",
+    "Ziggy hurt vo 03.ogg",
+    "Ziggy kill vo 10.ogg",
+    "Ziggy lead vo 02.ogg"
+  ]
 }
