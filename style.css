@@ -21,8 +21,50 @@ main {
   width: 100%;
   height: 70%;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.imageContainer {
+  cursor: pointer;
+  width: 8rem;
+  height: 5rem;
+  border: 3px solid black;
 }
 
 img {
-  cursor: pointer
+  object-fit: contain;
+  width: 8rem;
+  height: 5rem;
+  object-position: left;
+}
+
+.starter {
+  background-color: #94d7f4;
+}
+
+.rare {
+  background-color: #2edd1b;
+}
+
+.superrare {
+  background-color: #0087fa;
+}
+
+.epic {
+  background-color: #b116ec;
+}
+
+.mythic {
+  background-color: #ff0021;
+}
+
+.legendary {
+  background-color: #fff11e;
+}
+
+.ultralegendary {
+  background: url('./ultra.gif');
+  background-size: 8rem;
 }

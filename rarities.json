@@ -1,0 +1,17 @@
+{
+    "starter": ["Shelly"],
+    "rare": ["Barley", "Brock", "Bull", "Colt", "El Primo", "Nita", "Poco", "Rosa"],
+    "superrare": ["8-Bit", "Carl", "Darryl", "Dynamike", "Gus", "Jacky", "Jessie", "Penny", "Rico", "Tick"],
+    "epic": ["Angelo", "Ash", "Bea", "Belle", "Berry", "Bibi", "Bo", "Bolt",
+     "Bonnie", "Colette", "Edgar", "Emz", "Frank", "Gale", "Griff", "Grom",
+     "Hank", "Larry & Lawrie", "Lola", "Maisie", "Mandy", "Meeple", "Nani",
+     "Pam", "Pearl", "Piper", "Sam", "Shade", "Stu", "Trunk"],
+    "mythic": ["Ziggy", "Alli", "Buster", "Buzz", "Byron", "Charlie", "Chuck",
+     "Clancy", "Damian", "Doug", "Eve", "Fang", "Finx", "Gene", "Gigi", "Glowy",
+     "Gray", "Jae-yong", "Janet", "Juju", "Lou", "Lumi", "Max", "Melodie", "Mico", "Mina", "Moe",
+     "Mortis", "Mr. P", "Najia", "Ollie", "Otis", "R-T", "Ruffs", "Sprout", "Squeak", "Starr Nova",
+     "Tara", "Wendy", "Willow"],
+    "legendary": ["Amber", "Chester", "Cordelius", "Crow", "Draco", "Kenji", "Kit", "Leon", "Meg", 
+    "Nori", "Pierce", "Sandy", "Spike", "Surge"],
+    "ultralegendary": ["Kaze", "Sirius"]
+}

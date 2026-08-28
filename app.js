@@ -1,4 +1,5 @@
 let answer = ''
+let rarityData
 
 function changeAnswer(newAnswer) {
     answer = newAnswer
@@ -20,16 +21,30 @@ async function loadData(path) {
     return await response.json()
 }
 
-loadData('./voices.json').then((data) => {
+function getRarity(brawler) {
+    for (rarity of Object.keys(rarityData)){
+        if (rarityData[rarity].includes(brawler)) return rarity
+    }
+}
+
+loadData('./voices.json').then((voiceData) => {
     const brawlerSelectElement = document.getElementById('brawlerSelect')
-    const brawlerNames = Object.keys(data)
-    brawlerNames.forEach(name => {
+    const brawlerNames = Object.keys(voiceData)
+
+    loadData('./rarities.json').then((_rarityData) => {
+        rarityData = _rarityData
+        brawlerNames.forEach(name => {
         const imgElement = document.createElement('img')
         imgElement.src = `./assets/${name}/icon.webp`
         imgElement.onclick = () => {
             changeAnswer(name)
         }
-        brawlerSelectElement.appendChild(imgElement)
+        const imgDivElement = document.createElement('div')
+        imgDivElement.classList.add('imageContainer')
+        imgDivElement.classList.add(getRarity(name))
+        brawlerSelectElement.appendChild(imgDivElement)
+        imgDivElement.appendChild(imgElement)
+    })
     })
 })
 
