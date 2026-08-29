@@ -5,13 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brawl Stars Voice Lines Quiz</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="bg"></div>
   <main>
-    <div id="voiceLine"></div>
-    <div id="search">Hello yes this is a searching thing</div>
-    <div id="brawlerSelect"></div>
+    <div id="toppart">
+      <div id="brawlersselected">
+        <div id="chosenbrawler">
+          <h1>SELECTED BRAWLER</h1>
+          <div>
+            <div id="selectedcontainer" class="imageContainer" style="visibility: hidden;"><img id="selected" class="brawlerportrait"></div>  
+            <button id="confirm" class="clickable">CONFIRM</button>
+          </div>
+        </div>
+        <div id="pastbrawlers">
+          <h1>PREVIOUS BRAWLERS</h1>
+          <ul id="pastbrawlerslist"></ul>
+        </div>
+      </div>
+      <ul id="voicelines">
+        <li id="voicelineplayer1">
+          <img src="other_assets/audio1.png">
+        </li>
+        <li id="voicelineplayer2" style="display: none;">
+          <img src="other_assets/audio2.png">
+        </li>
+        <li id="voicelineplayer3" style="display: none;">
+          <img src="other_assets/audio3.png">
+        </li>
+        <li id="voicelineplayer4" style="display: none;">
+          <img src="other_assets/audio4.png">
+        </li>
+      </ul>
+      <div id="brawlertoguess"></div>
+    </div>
+    <input id="search">
+    <ul id="brawlerSelect"></ul>
   </main>
+  <audio id="voiceline1"></audio>
+  <audio id="voiceline2"></audio>
+  <audio id="voiceline3"></audio>
+  <audio id="voiceline4"></audio>
+  <audio id="brawlerselectaudio" src="other_assets/brawler select.ogg"></audio>
   <script src="app.js" defer></script>
 </body>
 </html>
