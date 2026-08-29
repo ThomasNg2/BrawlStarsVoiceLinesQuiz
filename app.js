@@ -156,7 +156,9 @@ function rollBrawler() {
     }
     let randomList = [...remainingBrawlerNames]
     shuffle(randomList)
-    for (brawler in lastBrawlers) randomList.splice(randomList.indexOf(brawler), 1)
+    for (brawler of lastBrawlers) {
+        randomList.splice(randomList.indexOf(brawler), 1)
+    }
     return randomList[0]
 }
 

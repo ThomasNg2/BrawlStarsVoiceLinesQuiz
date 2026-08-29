@@ -1,1 +1,7 @@
-V1 - Initial version
+V2 :
+- Fixed recent brawlers appearing again
+- Ultra Legendary background now looks correct on bigger portraits
+- Killed Spike
+
+V1 :
+- Initial version
