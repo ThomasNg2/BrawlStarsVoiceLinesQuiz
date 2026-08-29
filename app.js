@@ -11,6 +11,7 @@ let guessedBrawlers = []
 let answer = ''
 let currentAudioPlayer = 0
 
+let brawlerSelectElement
 let audioElements = []
 let audioPlayers = []
 let selectedContainer
@@ -227,10 +228,28 @@ function revealAnswer() {
     }, 3_000);
 }
 
+function search(searchInput) {
+    if (searchInput === undefined || searchInput === null) searchInput = ''
+    const brawlerListElements = brawlerSelectElement.childNodes
+    console.log(searchInput)
+    if(searchInput.trim().length === 0) {
+        brawlerListElements.forEach(node => { node.style.display = 'block' })
+        return
+    }
+    brawlerListElements.forEach(node => {
+        if(!node.children[0].id.toLowerCase().includes(searchInput.trim().toLowerCase())){
+            node.style.display = 'none'
+        } else {
+            node.style.display = 'block'
+        }
+    })
+
+}
+
 loadData('./voices.json').then((_voiceData) => {
     voiceData = _voiceData
 
-    const brawlerSelectElement = document.getElementById('brawlerSelect')
+    brawlerSelectElement = document.getElementById('brawlerSelect')
     selectedContainer = document.getElementById('selectedcontainer')
     selectedBrawlerElement = document.getElementById('selected')
     pastBrawlersListElement = document.getElementById('pastbrawlerslist')
@@ -246,6 +265,9 @@ loadData('./voices.json').then((_voiceData) => {
     oneLeftAudio = document.getElementById('oneleftaudio'); oneLeftAudio.volume = 0.2
 
     confirmButton.addEventListener('click', (_e) => checkAnswer())
+    document.getElementById('search').addEventListener('input', e => {
+        search(e.target.value)
+    })
 
     initVoicelinePlayers()
     brawlerNames = Object.keys(voiceData)

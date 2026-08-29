@@ -32,6 +32,7 @@ body {
 
 main {
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -41,13 +42,15 @@ main {
 
 #brawlerSelect {
   width: 100%;
-  flex-grow: 1;
+  height: 100%;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   padding: 8px;
   justify-content: center;
+  align-content: flex-start;
+
 }
 
 .imageContainer {
@@ -211,11 +214,13 @@ div h1 {
   color: white;
   background-color: black;
   border: 0;
-  height: 6rem;
+  height: 3rem;
+  max-height: 3rem;
   font-size: 1.5em;
   font-family: lilita;
   padding: 8px;
   user-select: text;
+  flex-grow: 0;
 }
 
 #brawlertoguess {
