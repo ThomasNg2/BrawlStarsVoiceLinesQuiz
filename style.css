@@ -139,7 +139,7 @@ div h1 {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  width: 30rem;
+  width: 48rem;
 }
 
 #chosenbrawler {
@@ -255,4 +255,15 @@ div h1 {
 
 * {
   user-select: none;
+}
+
+#selectedcontainer {
+  position: relative;
+} 
+
+#correctwrong {
+  width: 32px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

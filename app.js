@@ -1,4 +1,4 @@
-const LAST_BRAWLERS_LIMIT = 3
+const LAST_BRAWLERS_LIMIT = 5
 
 let guess = ''
 let rarityData = {}
@@ -19,11 +19,13 @@ let pastBrawlersListElement
 let confirmButton
 let brawlerToGuessCover
 let brawlerToGuessImg
+let correctWrongImg
 
 let brawlerSelectAudio
 let correctGuessAudio
 let wrongGuessAudio
 let allWrongAudio
+let oneLeftAudio
 
 
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -68,6 +70,8 @@ function checkAnswer() {
         playAudio(correctGuessAudio)
         revealAnswer()
         confirmButton.classList.add('disabled')
+        correctWrongImg.src = 'other_assets/correct.png'
+        correctWrongImg.style.visibility = 'visible'
         setTimeout(() => {
             confirmButton.classList.remove('disabled')
             addToPastBrawlersList(answer)
@@ -79,6 +83,8 @@ function checkAnswer() {
             confirmButton.classList.add('disabled')
             playAudio(allWrongAudio)
             revealAnswer()
+            correctWrongImg.src = 'other_assets/wrong.png'
+            correctWrongImg.style.visibility = 'visible'
             setTimeout(() => {
                 confirmButton.classList.remove('disabled')
                 addToPastBrawlersList(answer)
@@ -97,6 +103,7 @@ function startNewRound() {
     clearGuess()
     guessedBrawlers.forEach(brawler => document.getElementById(brawler).parentNode.classList.remove('disabled'))
     guessedBrawlers = []
+    correctWrongImg.style.visibility = 'hidden'
     answer = 'Frank' // rollBrawler()
     currentAudioPlayer = 0
     for (let i = 1;i < 4;++i) audioPlayers[i].style.display = 'none'
@@ -156,6 +163,7 @@ function rollBrawler() {
 function getRandomVoiceLine(brawler) {
     const lines = getBrawlerRemainingLines(brawler)
     if (lines.length === 0) return null
+    if (lines.length === 1) playAudio(oneLeftAudio)
     shuffle(lines)
     const chosenLine = lines[0]
     usedUpVoicesLines.push(chosenLine)
@@ -229,11 +237,13 @@ loadData('./voices.json').then((_voiceData) => {
     confirmButton = document.getElementById('confirm')
     brawlerToGuessCover = document.getElementById('brawlertoguesscover')
     brawlerToGuessImg = document.getElementById('brawlertoguessimg')
+    correctWrongImg = document.getElementById('correctwrong')
 
     brawlerSelectAudio = document.getElementById('brawlerselectaudio'); brawlerSelectAudio.volume = 0.4
     correctGuessAudio = document.getElementById('correctguessaudio')
     wrongGuessAudio = document.getElementById('wrongguessaudio'); wrongGuessAudio.volume = 0.1
     allWrongAudio = document.getElementById('allwrongaudio')
+    oneLeftAudio = document.getElementById('oneleftaudio'); oneLeftAudio.volume = 0.2
 
     confirmButton.addEventListener('click', (_e) => checkAnswer())
 

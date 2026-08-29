@@ -17,7 +17,10 @@
         <div id="chosenbrawler">
           <h1>SELECTED BRAWLER</h1>
           <div>
-            <div id="selectedcontainer" class="imageContainer" style="visibility: hidden;"><img id="selected" class="brawlerportrait" draggable="false"></div>  
+            <div id="selectedcontainer" class="imageContainer" style="visibility: hidden;">
+              <img id="selected" class="brawlerportrait" draggable="false">
+              <img id="correctwrong" draggable="false" style="visibility: hidden;">
+            </div>  
             <button id="confirm" class="clickable disabled">CONFIRM</button>
           </div>
         </div>
@@ -57,6 +60,7 @@
   <audio id="correctguessaudio" src="other_assets/correct guess.ogg"></audio>
   <audio id="wrongguessaudio" src="other_assets/wrong guess.ogg"></audio>
   <audio id="allwrongaudio" src="other_assets/all wrong.ogg"></audio>
+  <audio id="oneleftaudio" src="other_assets/one left.ogg"></audio>
   <script src="app.js" defer></script>
 </body>
 </html>
