@@ -62,6 +62,8 @@ function clearGuess() {
 
 function checkAnswer() {
     if (guess.length === 0) return
+    guessedBrawlers.push(guess)
+    document.getElementById(guess).parentNode.classList.add('disabled')
     if (guess === answer) {
         playAudio(correctGuessAudio)
         revealAnswer()
@@ -93,6 +95,8 @@ function checkAnswer() {
 
 function startNewRound() {
     clearGuess()
+    guessedBrawlers.forEach(brawler => document.getElementById(brawler).parentNode.classList.remove('disabled'))
+    guessedBrawlers = []
     answer = 'Frank' // rollBrawler()
     currentAudioPlayer = 0
     for (let i = 1;i < 4;++i) audioPlayers[i].style.display = 'none'
@@ -175,6 +179,7 @@ function makeBrawlerPortrait(brawler, withCallback) {
     if (withCallback) imgElement.id = brawler
     imgElement.src = `./brawler_assets/${brawler}/icon.webp`
     imgElement.classList.add('brawlerportrait')
+    imgElement.draggable = false
     const imgContainerElement = document.createElement('li')
     imgContainerElement.classList.add('imageContainer')
     imgContainerElement.classList.add(getRarity(brawler))
