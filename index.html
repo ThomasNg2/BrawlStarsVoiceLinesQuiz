@@ -18,38 +18,45 @@
           <h1>SELECTED BRAWLER</h1>
           <div>
             <div id="selectedcontainer" class="imageContainer" style="visibility: hidden;"><img id="selected" class="brawlerportrait"></div>  
-            <button id="confirm" class="clickable">CONFIRM</button>
+            <button id="confirm" class="clickable disabled">CONFIRM</button>
           </div>
         </div>
         <div id="pastbrawlers">
-          <h1>PREVIOUS BRAWLERS</h1>
+          <h1>PREVIOUS ROUNDS</h1>
           <ul id="pastbrawlerslist"></ul>
         </div>
       </div>
       <ul id="voicelines">
-        <li id="voicelineplayer1">
+        <li id="voicelineplayer1" class="clickable">
           <img src="other_assets/audio1.png">
         </li>
-        <li id="voicelineplayer2" style="display: none;">
+        <li id="voicelineplayer2" class="clickable" style="display: none;">
           <img src="other_assets/audio2.png">
         </li>
-        <li id="voicelineplayer3" style="display: none;">
+        <li id="voicelineplayer3" class="clickable" style="display: none;">
           <img src="other_assets/audio3.png">
         </li>
-        <li id="voicelineplayer4" style="display: none;">
+        <li id="voicelineplayer4" class="clickable" style="display: none;">
           <img src="other_assets/audio4.png">
         </li>
       </ul>
-      <div id="brawlertoguess"></div>
+      <div id="brawlertoguess">
+        <div id="brawlertoguesscover">?</div>
+        <img id="brawlertoguessimg">
+      </div>
     </div>
-    <input id="search">
+    <input id="search" placeholder="Search by name...">
     <ul id="brawlerSelect"></ul>
+    <div id="version">V1</div>
   </main>
   <audio id="voiceline1"></audio>
   <audio id="voiceline2"></audio>
   <audio id="voiceline3"></audio>
   <audio id="voiceline4"></audio>
   <audio id="brawlerselectaudio" src="other_assets/brawler select.ogg"></audio>
+  <audio id="correctguessaudio" src="other_assets/correct guess.ogg"></audio>
+  <audio id="wrongguessaudio" src="other_assets/wrong guess.ogg"></audio>
+  <audio id="allwrongaudio" src="other_assets/all wrong.ogg"></audio>
   <script src="app.js" defer></script>
 </body>
 </html>

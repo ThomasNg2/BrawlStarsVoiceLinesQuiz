@@ -9,15 +9,21 @@ let remainingBrawlerNames = []
 let usedUpVoicesLines = []
 let guessedBrawlers = []
 let answer = ''
-let testLines = ['brawler_assets/test/Frank vo 03.ogg', 'brawler_assets/test/Frank vo 04.ogg', 'brawler_assets/test/Frank vo 05.ogg', 'brawler_assets/test/Frank vo 06.ogg']
+let currentAudioPlayer = 0
 
 let audioElements = []
 let audioPlayers = []
 let selectedContainer
 let selectedBrawlerElement
 let pastBrawlersListElement
+let confirmButton
+let brawlerToGuessCover
+let brawlerToGuessImg
 
 let brawlerSelectAudio
+let correctGuessAudio
+let wrongGuessAudio
+let allWrongAudio
 
 
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -45,34 +51,64 @@ function changeGuess(newGuess) {
     selectedBrawlerElement.classList = ''
     selectedBrawlerElement.classList.add('brawlerportrait')
     selectedBrawlerElement.classList.add(getRarity(newGuess))
+    confirmButton.classList.remove('disabled')
 }
 
 function clearGuess() {
     guess = ''
     selectedContainer.style.visibility = 'hidden'
+    confirmButton.classList.add('disabled')
 }
 
 function checkAnswer() {
-    if (guess === answer) window.alert("yippee")
-    else {
+    if (guess.length === 0) return
+    if (guess === answer) {
+        playAudio(correctGuessAudio)
+        revealAnswer()
+        confirmButton.classList.add('disabled')
+        setTimeout(() => {
+            confirmButton.classList.remove('disabled')
+            addToPastBrawlersList(answer)
+            startNewRound()
+        }, 3_000);
+    } else {
         const newLine = getRandomVoiceLine(answer)
         if (newLine === null) {
-            window.alert("your ded")
+            confirmButton.classList.add('disabled')
+            playAudio(allWrongAudio)
+            revealAnswer()
             setTimeout(() => {
+                confirmButton.classList.remove('disabled')
+                addToPastBrawlersList(answer)
                 startNewRound()
             }, 3_000);
-        } else loadNextVoiceLine(newLine)
+        } else {
+            clearGuess()
+            playAudio(wrongGuessAudio)
+            loadNextVoiceLine(newLine)
+        }
 
     }
 }
 
 function startNewRound() {
-    answer = rollBrawler()
+    clearGuess()
+    answer = 'Frank' // rollBrawler()
+    currentAudioPlayer = 0
+    for (let i = 1;i < 4;++i) audioPlayers[i].style.display = 'none'
+    loadNextVoiceLine(getRandomVoiceLine(answer))
     console.log(answer)
 }
 
 function loadNextVoiceLine(voiceline) {
-    
+    const targetAudioPlayer = audioPlayers[currentAudioPlayer]
+    const targetAudio = audioElements[currentAudioPlayer]
+    targetAudio.volume = 0.2
+    if (currentAudioPlayer > 0){
+        targetAudioPlayer.style.display = 'block'
+    }
+    targetAudio.src = `brawler_assets/${answer}/${voiceline}`
+    currentAudioPlayer += 1
 }
 
 
@@ -97,15 +133,18 @@ function getBrawlerRemainingLines(brawler){
 }
 
 function rollBrawler() {
-    lastBrawlers.push(answer)
-    if (lastBrawlers.length > LAST_BRAWLERS_LIMIT) lastBrawlers.shift()
-    if (getBrawlerRemainingLines(answer).length === 0) remainingBrawlerNames.splice(remainingBrawlerNames.indexOf(answer), 1)
+    if (answer !== '') {
+        lastBrawlers.push(answer)
+        if (lastBrawlers.length > LAST_BRAWLERS_LIMIT) lastBrawlers.shift()
+        if (getBrawlerRemainingLines(answer).length === 0) remainingBrawlerNames.splice(remainingBrawlerNames.indexOf(answer), 1)
+    }
     if (remainingBrawlerNames.length === 0) {
         usedUpVoicesLines = []
         remainingBrawlerNames = [...brawlerNames]
         return
     }
     let randomList = [...remainingBrawlerNames]
+    shuffle(randomList)
     for (brawler in lastBrawlers) randomList.splice(randomList.indexOf(brawler), 1)
     return randomList[0]
 }
@@ -113,8 +152,8 @@ function rollBrawler() {
 function getRandomVoiceLine(brawler) {
     const lines = getBrawlerRemainingLines(brawler)
     if (lines.length === 0) return null
-    const shuffledLines = shuffle(lines)
-    const chosenLine = shuffledLines[0]
+    shuffle(lines)
+    const chosenLine = lines[0]
     usedUpVoicesLines.push(chosenLine)
     return chosenLine
 }
@@ -162,6 +201,19 @@ function playAudio(audio) {
     audio.play()
 }
 
+function revealAnswer() {
+    brawlerToGuessCover.style.visibility = 'hidden'
+    brawlerToGuessImg.style.visibility = 'visible'
+    brawlerToGuessImg.src = `brawler_assets/${answer}/icon.webp`
+    brawlerToGuessImg.classList = ''
+    brawlerToGuessImg.classList.add('brawlerportraitbig')
+    brawlerToGuessImg.classList.add(getRarity(answer))
+    setTimeout(() => {
+        brawlerToGuessCover.style.visibility = 'visible'
+        brawlerToGuessImg.style.visibility = 'hidden'
+    }, 3_000);
+}
+
 loadData('./voices.json').then((_voiceData) => {
     voiceData = _voiceData
 
@@ -169,17 +221,29 @@ loadData('./voices.json').then((_voiceData) => {
     selectedContainer = document.getElementById('selectedcontainer')
     selectedBrawlerElement = document.getElementById('selected')
     pastBrawlersListElement = document.getElementById('pastbrawlerslist')
-    brawlerSelectAudio = document.getElementById('brawlerselectaudio')
+    confirmButton = document.getElementById('confirm')
+    brawlerToGuessCover = document.getElementById('brawlertoguesscover')
+    brawlerToGuessImg = document.getElementById('brawlertoguessimg')
+
+    brawlerSelectAudio = document.getElementById('brawlerselectaudio'); brawlerSelectAudio.volume = 0.4
+    correctGuessAudio = document.getElementById('correctguessaudio')
+    wrongGuessAudio = document.getElementById('wrongguessaudio'); wrongGuessAudio.volume = 0.1
+    allWrongAudio = document.getElementById('allwrongaudio')
+
+    confirmButton.addEventListener('click', (_e) => checkAnswer())
 
     initVoicelinePlayers()
     brawlerNames = Object.keys(voiceData)
     remainingBrawlerNames = [...brawlerNames]
 
+    
     loadData('./rarities.json').then((_rarityData) => {
         rarityData = _rarityData
         brawlerNames.forEach(name => {
             brawlerSelectElement.appendChild(makeBrawlerPortrait(name, true))
         })
+        
+        startNewRound()
     })
 })
 
