@@ -105,11 +105,10 @@ function startNewRound() {
     guessedBrawlers.forEach(brawler => document.getElementById(brawler).parentNode.classList.remove('disabled'))
     guessedBrawlers = []
     correctWrongImg.style.visibility = 'hidden'
-    answer = 'Frank' // rollBrawler()
+    answer = rollBrawler()
     currentAudioPlayer = 0
     for (let i = 1;i < 4;++i) audioPlayers[i].style.display = 'none'
     loadNextVoiceLine(getRandomVoiceLine(answer))
-    console.log(answer)
 }
 
 function loadNextVoiceLine(voiceline) {
@@ -231,7 +230,6 @@ function revealAnswer() {
 function search(searchInput) {
     if (searchInput === undefined || searchInput === null) searchInput = ''
     const brawlerListElements = brawlerSelectElement.childNodes
-    console.log(searchInput)
     if(searchInput.trim().length === 0) {
         brawlerListElements.forEach(node => { node.style.display = 'block' })
         return
