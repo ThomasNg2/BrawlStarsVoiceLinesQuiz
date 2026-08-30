@@ -347,6 +347,11 @@
     "Leon lead vo 03.ogg",
     "Leon start vo 02.ogg"
   ],
+  "Lily": [
+    "lily_atk_01.ogg",
+    "lily_ulti_atk_01.ogg",
+    "lily_ulti_hit_01.ogg"
+  ],
   "Lola": [
     "Lola die vo 03.ogg",
     "Lola hurt vo 02.ogg",
@@ -556,6 +561,10 @@
     "Sirius hurt vo 01.ogg",
     "Sirius hurt vo 04.ogg",
     "Sirius kill vo 02.ogg"
+  ],
+  "Spike": [
+    "spike_atk_01.ogg",
+    "spike_ulti_explo_01.ogg"
   ],
   "Sprout": [
     "Sprout die vo 01.ogg",

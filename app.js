@@ -140,7 +140,9 @@ function getRarity(brawler) {
 }
 
 function getBrawlerRemainingLines(brawler){
-    return voiceData[brawler].filter(voiceline => !usedUpVoicesLines.includes(voiceline))
+    const brawlerVoicesLines = voiceData[brawler]
+    if (!brawlerVoicesLines) window.alert(`Something went wrong, could not find voicelines for : ${brawler}`)
+    return brawlerVoicesLines.filter(voiceline => !usedUpVoicesLines.includes(voiceline))
 }
 
 function rollBrawler() {
